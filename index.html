@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEBMARGABEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU -->
+  <header>
+    <h1 class="logo">DEBMARGABEL</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="contato.html">Contato</a>
+      <a href="suporte.html">Suporte</a>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section id="inicio" class="banner">
+    <h2>Vista sua melhor versão.</h2>
+    <p>Moda, estilo e conforto em um só lugar.</p>
+    <a href="#produtos" class="botao">Ver produtos</a>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos">
+    <h2>Produtos</h2>
+    <p>Clique em um produto para ver os detalhes.</p>
+
+    <div class="filtros">
+      <button onclick="filtrar('todos')">Todos</button>
+      <button onclick="filtrar('blusas')">Blusas</button>
+      <button onclick="filtrar('calcas')">Calças</button>
+      <button onclick="filtrar('moletons')">Moletons</button>
+    </div>
+
+    <div class="lista">
+      <div class="produto blusas" onclick="abrirDetalhes('blusa')">
+        <img src="img/blusa.jpg" alt="Blusa Básica">
+        <h3>Blusa Básica</h3>
+        <p>R$ 49,90</p>
+      </div>
+
+      <div class="produto blusas" onclick="abrirDetalhes('camiseta')">
+        <img src="img/camiseta.jpg" alt="Camiseta Oversized">
+        <h3>Camiseta Oversized</h3>
+        <p>R$ 59,90</p>
+      </div>
+
+      <div class="produto calcas" onclick="abrirDetalhes('calca')">
+        <img src="img/calca.jpg" alt="Calça Alfaiataria">
+        <h3>Calça Alfaiataria</h3>
+        <p>R$ 99,90</p>
+      </div>
+
+      <div class="produto moletons" onclick="abrirDetalhes('moletom')">
+        <img src="img/moletom.jpg" alt="Moletom Básico">
+        <h3>Moletom Básico</h3>
+        <p>R$ 129,90</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JANELA DE DETALHES + FORMULÁRIO DE INTERESSE -->
+  <div id="modal" class="modal">
+    <div class="modal-conteudo">
+      <button class="fechar" onclick="fecharDetalhes()">✕</button>
+
+      <img id="modal-img" src="" alt="">
+      <div class="modal-texto">
+        <h3 id="modal-nome"></h3>
+        <p id="modal-preco" class="preco"></p>
+        <p id="modal-descricao"></p>
+
+        <h4>Tenho interesse</h4>
+        <form onsubmit="enviarInteresse(event)">
+          <input type="text" id="int-nome" placeholder="Seu nome" required>
+          <input type="email" id="int-email" placeholder="Seu e-mail" required>
+          <input type="tel" id="int-telefone" placeholder="Seu telefone" required>
+          <button type="submit">Enviar interesse</button>
+        </form>
+        <p id="int-resposta"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>DEBMARGABEL · contato@debmargabel.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
