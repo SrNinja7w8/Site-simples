@@ -59,7 +59,9 @@ nav a:hover { text-decoration: underline; }
 
 .lista {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
   gap: 20px;
 }
 .produto {

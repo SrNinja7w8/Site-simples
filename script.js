@@ -1,4 +1,4 @@
-// 1) DADOS DOS PRODUTOS (nome, preço, foto e descrição)
+//DADOS DOS PRODUTOS (nome, preço, foto e descrição)
 const produtos = {
   blusa: {
     nome: "Blusa Básica",
@@ -28,7 +28,7 @@ const produtos = {
 
 let produtoAtual = ""; // guarda qual produto está aberto
 
-// 2) ABRIR a janela com os detalhes do produto clicado
+//ABRIR a janela com os detalhes do produto clicado
 function abrirDetalhes(id) {
   const p = produtos[id];
   produtoAtual = p.nome;
@@ -42,12 +42,12 @@ function abrirDetalhes(id) {
   document.getElementById("modal").style.display = "flex";
 }
 
-// 3) FECHAR a janela
+//FECHAR a janela
 function fecharDetalhes() {
   document.getElementById("modal").style.display = "none";
 }
 
-// 4) FORMULÁRIO DE INTERESSE (ilustração: não envia nada para lugar nenhum)
+//FORMULÁRIO DE INTERESSE (ilustração: não envia nada para lugar nenhum)
 function enviarInteresse(event) {
   event.preventDefault(); // impede a página de recarregar
   const nome = document.getElementById("int-nome").value;
@@ -56,7 +56,7 @@ function enviarInteresse(event) {
   event.target.reset(); // limpa o formulário
 }
 
-// 5) FILTRO: mostra só os produtos da categoria escolhida
+//FILTRO: mostra só os produtos da categoria escolhida
 function filtrar(categoria) {
   const lista = document.querySelectorAll(".produto");
 
@@ -69,7 +69,7 @@ function filtrar(categoria) {
   }
 }
 
-// 6) CONTATO: simula o envio do formulário da página de contato
+//CONTATO: simula o envio do formulário da página de contato
 function enviarContato(event) {
   event.preventDefault();
   const nome = document.getElementById("nome").value;
